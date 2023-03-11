@@ -1,38 +1,383 @@
-.maketforfigma{
-    flex: 0 0 auto;
-    background: #313a46;
-    font-weight: bold;
-    display: flex;
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
-.maketforfigma img{
-    border-radius: 10px;
-    margin: 4px 0 0 4px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.maketforfigma {
+  flex: 0 0 auto;
+  background: #313a46;
+  font-weight: bold;
+  display: flex;
+}
+
+.maketforfigma img {
+  border-radius: 10px;
+  margin: 4px 0 0 4px;
+}
+
 .maketforfigma p {
-    color: #98a6ad;
-    text-decoration: none;
-    letter-spacing: .01875rem;
-    font-size: .775rem;
-    padding: 0 10px;
-    line-height: 0.70rem;
+  color: #98a6ad;
+  text-decoration: none;
+  letter-spacing: 0.01875rem;
+  font-size: 0.775rem;
+  padding: 0 10px;
+  line-height: 0.7rem;
 }
+
 .maketforfigma p > a {
-    color: #bbe4f0;
-    font-weight: bold;
+  color: #bbe4f0;
+  font-weight: bold;
 }
+
 .maketforfigma p > a:hover {
-    color: #ffffff
+  color: #ffffff;
 }
-.main{
-    flex: 1 0 auto;
+
+html {
+  height: 100%;
 }
-html{
-    height: 100%;
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+
+.main {
+  flex: 1 0 auto;
+  background-color: #121214;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #FFFFFF;
+}
+
+.container {
+  width: 1104px;
+  margin: 0 auto;
+}
+
+.container__max {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: block;
+  padding: 5px 20px 7px;
+  background: #0033FF;
+  border-radius: 8px;
+  color: #FFFFFF;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  margin-top: 18px;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+.footer .footer__wrapper .footer__block, .cards .cards__wrap .cards__wrap-card, .tech .tech__wrapper .tech__wrap, .gear .gear__wrapper .gear__wrap, .connect .connect__wrapper .connect__wrap, .sounds .sounds__wrapper .sounds__wrap, .top .top__offer .top__offer-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards .cards__wrap, .tech .tech__wrapper, .gear .gear__wrapper, .connect .connect__wrapper, .sounds .sounds__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tech .tech__wrapper .tech__wrap .tech__wrap-name, .gear .gear__wrapper .gear__wrap .gear__wrap-name, .connect .connect__wrapper .connect__wrap .connect__wrap-name, .sounds .sounds__wrapper .sounds__wrap .sound__wrap-name {
+  font-size: 12px;
+  line-height: 1.16em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #A6A8AD;
+}
+
+header {
+  padding-top: 17px;
+  padding-bottom: 22px;
+}
+header .header {
+  display: flex;
+  align-items: center;
+}
+header .header .header__logo {
+  margin-right: 29px;
+  margin-left: 20px;
+}
+header .header .header__logo:hover {
+  opacity: 0.6;
+}
+header .header .header__nav .header__nav-items {
+  display: flex;
+  margin-right: 382px;
+}
+header .header .header__nav .header__nav-items .header__nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+header .header .header__nav .header__nav-items .header__nav-link {
+  color: #A6A8AD;
+}
+header .header .header__account-link {
+  color: #A6A8AD;
+  margin-right: 20px;
+}
+header .header .header__account-btn {
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 32px;
+  padding: 8px 21px;
+  color: #121214;
+}
+header .header .header__account-btn:hover {
+  opacity: 0.6;
+}
+
+.top .top__advert {
+  background-color: #0033FF;
+  padding: 11px 0;
+  display: flex;
+  justify-content: center;
+}
+.top .top__advert .top__advert-link {
+  margin-left: 50px;
+  color: #FFFFFF;
+}
+.top .top__advert .top__advert-link:hover {
+  opacity: 0.6;
+}
+.top .top__offer {
+  background: url("/img/image.jpg") no-repeat center top/cover;
+}
+.top .top__offer .top__offer-wrap {
+  width: 412px;
+  padding-top: 140px;
+  padding-bottom: 214px;
+  margin-left: 48px;
+}
+.top .top__offer .top__offer-wrap .top__offer-title {
+  font-size: 72px;
+  line-height: 1em;
+  margin-bottom: 26px;
+}
+.top .top__offer .top__offer-wrap .top__offer-text {
+  font-size: 20px;
+  line-height: 1.25em;
+  margin-bottom: 44px;
+}
+.top .top__offer .top__offer-wrap .top__offer-btn {
+  background: #0033FF;
+  padding: 16px 32px;
+  color: #FFFFFF;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 8px;
+}
+
+.sounds {
+  padding-top: 96px;
+}
+.sounds .sounds__wrapper .sounds__wrap {
+  width: 441px;
+}
+.sounds .sounds__wrapper .sounds__wrap .sounds__wrap-title {
+  font-size: 28px;
+  line-height: 1.28em;
+  margin-bottom: 12px;
+}
+
+.connect {
+  padding-top: 96px;
+}
+.connect .connect__wrapper .connect__wrap {
+  width: 422px;
+  align-items: end;
+}
+.connect .connect__wrapper .connect__wrap .connect__wrap-title {
+  font-size: 28px;
+  line-height: 1.28em;
+  margin-bottom: 12px;
+}
+.connect .connect__wrapper .connect__wrap .connect__wrap-text {
+  text-align: end;
+}
+
+.gear {
+  padding-top: 96px;
+}
+.gear .gear__wrapper .gear__wrap {
+  width: 424px;
+}
+.gear .gear__wrapper .gear__wrap .gear__wrap-title {
+  font-size: 28px;
+  line-height: 1.28em;
+  margin-bottom: 12px;
+}
+
+.tech {
+  padding-top: 96px;
+}
+.tech .tech__wrapper .tech__wrap {
+  width: 441px;
+  align-items: end;
+}
+.tech .tech__wrapper .tech__wrap .tech__wrap-title {
+  font-size: 28px;
+  line-height: 1.28em;
+  margin-bottom: 12px;
+}
+.tech .tech__wrapper .tech__wrap .tech__wrap-text {
+  text-align: end;
+}
+
+.cards {
+  padding: 120px 0;
+}
+.cards .cards__title {
+  font-size: 28px;
+  line-height: 1.28em;
+  margin-bottom: 24px;
+}
+.cards .cards__wrap .cards__wrap-card {
+  padding: 32px;
+  background: #F8F8F8;
+  border-radius: 8px;
+}
+.cards .cards__wrap .cards__wrap-card .cards__wrap-card_img {
+  width: 223px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.cards .cards__wrap .cards__wrap-card .cards__wrap-card_text {
+  font-size: 20px;
+  line-height: 1.56em;
+  margin-bottom: 16px;
+  color: #000000;
+}
+.cards .cards__wrap .cards__wrap-card .cards__wrap-card_name {
+  color: #767676;
+  font-size: 14px;
+  line-height: 1.42em;
+}
+.cards .cards__wrap .cards__wrap-card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.offer__block {
+  background: url("/img/photo.jpg") no-repeat center center/cover;
+  padding: 283px 0 288px;
+}
+.offer__block .offer__title {
+  font-size: 54px;
+  line-height: 1.11em;
+  margin-bottom: 57px;
+  text-align: center;
+}
+.offer__block .offer__btn {
+  margin: 0 auto;
+}
+
+.footer {
+  padding: 48px 0 50px;
+}
+.footer .footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__wrapper .footer__block .footer__block-title {
+  font-size: 20px;
+  line-height: 1.2em;
+  margin-bottom: 12px;
+}
+.footer .footer__wrapper .footer__block .footer__block-link {
+  color: #A6A8AD;
+  font-size: 12px;
+  line-height: 1.15em;
+  margin-bottom: 11px;
+}
+.footer .footer__wrapper .footer__block .footer__block-link.end {
+  margin-bottom: 24px;
+}
+.footer .footer__wrap {
+  margin-top: 83px;
+  display: flex;
+  color: #A6A8AD;
+}
+.footer .footer__wrap .footer__nav-items {
+  display: flex;
+  margin-right: 24px;
+  margin-left: 24px;
+}
+.footer .footer__wrap .footer__nav-items .footer__nav-link {
+  color: #A6A8AD;
+}
+.footer .footer__wrap .footer__nav-items .footer__nav-item:not(:last-child) {
+  margin-right: 24px;
+}
+.footer .footer__wrap .footer__social {
+  display: block;
+  margin-top: 4px;
 }
