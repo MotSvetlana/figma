@@ -100,9 +100,9 @@ header {
     .header {
         display: flex;
         align-items: center;
+        justify-content: center;
         .header__logo {
             margin-right: 29px;
-            margin-left: 20px;
             &:hover {
                 opacity: 0.6;
             }

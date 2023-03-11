@@ -163,10 +163,10 @@ header {
 header .header {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 header .header .header__logo {
   margin-right: 29px;
-  margin-left: 20px;
 }
 header .header .header__logo:hover {
   opacity: 0.6;
